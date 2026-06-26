@@ -92,26 +92,21 @@
     return article;
   }
 
+  const NO_GAMES_MESSAGE = "No games are available at the moment. Check back soon!";
+  const NO_GAMES_ANNOUNCEMENT = "No games are currently available.";
+
   // ── Render the list of games ──────────────────────────────────
   function renderGames(games) {
     // Clear any previous content (e.g. the loading message)
     gamesList.innerHTML = "";
 
-    if (!games || games.length === 0) {
-      const empty = document.createElement("p");
-      empty.textContent = "No games are available at the moment. Check back soon!";
-      gamesList.appendChild(empty);
-      announce("No games are currently available.");
-      return;
-    }
-
-    const validGames = games.filter(isValidGame);
+    const validGames = games ? games.filter(isValidGame) : [];
 
     if (validGames.length === 0) {
       const empty = document.createElement("p");
-      empty.textContent = "No games are available at the moment. Check back soon!";
+      empty.textContent = NO_GAMES_MESSAGE;
       gamesList.appendChild(empty);
-      announce("No games are currently available.");
+      announce(NO_GAMES_ANNOUNCEMENT);
       return;
     }
 
