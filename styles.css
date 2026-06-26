@@ -1,0 +1,305 @@
+/* ============================================================
+   Reset & base
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   Custom properties — high-contrast colour palette
+   ============================================================ */
+:root {
+  --color-bg: #0d0d0d;
+  --color-surface: #1a1a1a;
+  --color-surface-hover: #262626;
+  --color-border: #444444;
+  --color-text: #f0f0f0;
+  --color-text-muted: #b0b0b0;
+  --color-accent: #4fc3f7;
+  --color-accent-hover: #81d4fa;
+  --color-accent-active: #0288d1;
+  --color-error: #ff6b6b;
+  --color-focus-ring: #ffdd57;
+
+  --font-family: "Segoe UI", Arial, sans-serif;
+  --font-size-base: 1.125rem; /* 18 px — easier to read */
+  --line-height: 1.7;
+  --max-width: 900px;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 3rem;
+  --radius: 6px;
+}
+
+/* ============================================================
+   Accessibility helper
+   ============================================================ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================================
+   Skip link
+   ============================================================ */
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: 0;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-focus-ring);
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  z-index: 9999;
+  border-radius: var(--radius);
+}
+
+.skip-link:focus {
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+}
+
+/* ============================================================
+   Global focus style — visible for keyboard / screen reader
+   ============================================================ */
+:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+/* ============================================================
+   Body & typography
+   ============================================================ */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.75rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: var(--spacing-md);
+}
+
+h3 {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  margin-bottom: var(--spacing-sm);
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent-hover);
+}
+
+a:active {
+  color: var(--color-accent-active);
+}
+
+/* ============================================================
+   Layout container
+   ============================================================ */
+header,
+nav,
+main,
+footer {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--spacing-md);
+}
+
+/* ============================================================
+   Header
+   ============================================================ */
+header {
+  padding-block: var(--spacing-lg);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.tagline {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* ============================================================
+   Navigation
+   ============================================================ */
+nav {
+  padding-block: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+}
+
+nav a:hover,
+nav a:focus {
+  border-color: var(--color-accent);
+  color: var(--color-accent-hover);
+  text-decoration: none;
+}
+
+/* ============================================================
+   Main sections
+   ============================================================ */
+main section {
+  padding-block: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+main section:last-child {
+  border-bottom: none;
+}
+
+/* ============================================================
+   Game cards
+   ============================================================ */
+#games-list {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.game-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--spacing-md);
+}
+
+.game-card:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.game-card__meta {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.game-card__description {
+  margin-bottom: var(--spacing-md);
+}
+
+.game-card__download {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background-color: var(--color-accent);
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.game-card__download:hover,
+.game-card__download:focus {
+  background-color: var(--color-accent-hover);
+  color: #000;
+  text-decoration: none;
+}
+
+.game-card__download:active {
+  background-color: var(--color-accent-active);
+  color: #fff;
+}
+
+/* ============================================================
+   Error message
+   ============================================================ */
+.error-message {
+  color: var(--color-error);
+  font-weight: 600;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+footer {
+  padding-block: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   Responsive adjustments
+   ============================================================ */
+@media (min-width: 600px) {
+  #games-list {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  }
+}
+
+/* ============================================================
+   Reduced-motion support
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
