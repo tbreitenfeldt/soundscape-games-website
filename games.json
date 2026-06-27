@@ -4,7 +4,8 @@
       "name": "Example Audio Adventure",
       "description": "An immersive audio adventure game where you navigate through a haunted forest using only sound cues. Collect items, solve puzzles, and escape before dawn.",
       "version": "1.0.0",
-      "downloadUrl": "https://cdn.soundscapegames.com/games/example-audio-adventure-1.0.0.zip"
+      "windowsDownloadUrl": "https://cdn.soundscapegames.com/games/example-audio-adventure-1.0.0-windows.zip",
+      "macDownloadUrl": "https://cdn.soundscapegames.com/games/example-audio-adventure-1.0.0-mac.zip"
     }
   ]
 }

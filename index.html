@@ -16,7 +16,12 @@
     <header role="banner">
       <div class="header-inner">
         <h1>Soundscape Games</h1>
-        <p class="tagline">Audio games for everyone — no vision required.</p>
+        <p class="tagline">Adventure begins with sound.</p>
+        <p class="hero-description">
+          Discover immersive audio adventures where sound is your guide.
+        </p>
+        <a class="hero-cta" href="#games">Browse Games</a>
+        <div class="hero-wave" aria-hidden="true"></div>
       </div>
     </header>
 
@@ -24,6 +29,7 @@
       <ul>
         <li><a href="#games">Games</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#contributors">Contributors</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -31,6 +37,9 @@
     <main id="main-content">
       <section id="games" aria-labelledby="games-heading">
         <h2 id="games-heading">Games</h2>
+        <p class="section-helper">
+          Browse the latest accessible audio adventures available for download.
+        </p>
 
         <div
           id="games-status"
@@ -47,27 +56,52 @@
 
       <section id="about" aria-labelledby="about-heading">
         <h2 id="about-heading">About</h2>
-        <p>
-          Soundscape Games is dedicated to creating audio games that are fully
-          accessible to blind and low-vision players. Every game relies entirely
-          on sound for gameplay — no visual elements are required. All games are
-          free to download and work on Windows.
+        <p class="section-helper">
+          Learn more about the mission behind Soundscape Games.
         </p>
+        <p class="section-intro">
+          Soundscape Games is an independent studio creating immersive,
+          audio-first experiences.
+        </p>
+        <p>
+          Accessibility is built into every stage of development, ensuring each
+          game delivers polished gameplay, engaging storytelling, and
+          thoughtful design that can be enjoyed by a wide audience.
+        </p>
+      </section>
+
+      <section id="contributors" aria-labelledby="contributors-heading">
+        <h2 id="contributors-heading">Contributors</h2>
+        <ul class="contributors-list" aria-label="Contributors list">
+          <li class="contributor-card">
+            <p class="contributor-name">Timothy Breitenfeldt</p>
+            <p class="contributor-role">Founder and Developer</p>
+          </li>
+        </ul>
       </section>
 
       <section id="contact" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contact</h2>
-        <p>
-          Have a question, feedback, or bug report? Reach out at
-          <a href="mailto:contact@soundscapegames.com"
-            >contact@soundscapegames.com</a
-          >.
+        <p class="section-helper">
+          Questions, feedback, or bug reports are always welcome.
         </p>
+        <a class="contact-email-button" href="mailto:contact@soundscapegames.com"
+          >contact@soundscapegames.com</a
+        >
       </section>
     </main>
 
     <footer role="contentinfo">
-      <p>&copy; <span id="footer-year"></span> Soundscape Games. All rights reserved.</p>
+      <p class="footer-copyright">
+        &copy; Timothy Breitenfeldt. All rights reserved. Last updated
+        <span id="footer-year"></span>.
+      </p>
+      <nav aria-label="Footer links">
+        <ul class="footer-links">
+          <li><a href="#main-content">Back to top</a></li>
+          <li><a href="https://github.com/tbreitenfeldt" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </nav>
     </footer>
 
     <script src="main.js"></script>
