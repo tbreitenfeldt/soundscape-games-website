@@ -2,8 +2,8 @@
   "games": [
     {
       "name": "MTG Audio",
-      "description": "A Magic the Gathering audio adventure game that immerses players in the world of MTG through soundscapes and interactive audio experiences.",
-      "version": "0.8.9",
+      "description": "MTG Audio is an accessible, audio-first way to play Magic The Gathering on a virtual tabletop.",
+      "version": "0.8.10",
       "windowsDownloadUrl": "https://downloads.soundscapegames.com/mtg-audio/windows/mtg-windows.zip",
       "macDownloadUrl": "https://downloads.soundscapegames.com/mtg-audio/mac/mtg-mac.zip"
     }
