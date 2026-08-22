@@ -3,7 +3,7 @@
     {
       "name": "MTG Audio",
       "description": "MTG Audio is an accessible, audio-first way to play Magic The Gathering on a virtual tabletop.",
-      "version": "0.8.14",
+      "version": "0.8.15",
       "windowsDownloadUrl": "https://downloads.soundscapegames.com/mtg-audio/windows/mtg-windows.zip",
       "macDownloadUrl": "https://downloads.soundscapegames.com/mtg-audio/mac/mtg-mac.zip"
     }
